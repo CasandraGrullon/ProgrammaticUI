@@ -26,7 +26,11 @@ class MainView: UIView {
     //create a button
     public lazy var resetButton: UIButton = {
         let button = UIButton()
-    }
+        button.setTitle("Reset", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.systemPink, for: .normal)
+        return button
+    }()
     
     //1. init(frame:) is called if the view is created proggrammatically
     override init(frame: CGRect) {
@@ -44,10 +48,11 @@ class MainView: UIView {
     }
     
     private func commonInit() {
-        setupMessageLabel()
+        setupMessageLabelConstraints()
+        setupButtonConstraints()
     }
     
-    private func setupMessageLabel() {
+    private func setupMessageLabelConstraints() {
         //1. add the object (message label) to the main view
         addSubview(messageLabel)
         
@@ -63,9 +68,17 @@ class MainView: UIView {
             messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             messageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
+    }
+    
+    private func setupButtonConstraints() {
+        addSubview(resetButton)
         
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
         
-        
+        NSLayoutConstraint.activate([
+            resetButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            resetButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 40)
+        ])
     }
     
 }

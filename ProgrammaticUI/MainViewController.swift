@@ -25,6 +25,9 @@ class MainViewController: UIViewController {
         //system colors are dark mode ready
         view.backgroundColor = .systemPink
         congifureNavBar()
+        
+        //add target action for reset button ==> similar to IBAction
+        mainView.resetButton.addTarget(self, action: #selector(resetAppColor(_:)), for: .touchUpInside)
     }
     
     private func congifureNavBar() {
@@ -45,8 +48,11 @@ class MainViewController: UIViewController {
         //other ways to present a segue!
         //settingsVC.modalPresentationStyle = .overCurrentContext
         //settingsVC.modalTransitionStyle = .flipHorizontal
-        
-        
+    }
+    
+    @objc
+    private func resetAppColor(_ sender: UIButton) {
+        print("reset")
     }
     
 }
