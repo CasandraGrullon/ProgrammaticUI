@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct AppKey {
+    static let appColorKey = "app color"
+}
+
 class SettingsViewController: UIViewController {
 
     private let settingsView = SettingsView()
@@ -21,7 +25,8 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: colors.first ?? "Red")
+        let colorName = colors[0]
+        view.backgroundColor = UIColor(named: colorName)
         
         //configure delegate and datasource of pickerView
         settingsView.pickerView.delegate = self
@@ -49,5 +54,8 @@ extension SettingsViewController: UIPickerViewDelegate {
         //called every time the picker selection is changed
         let colorName = colors[row]
         view.backgroundColor = UIColor(named: colorName)
+        
+        //save colorName to User Defaults
+        UserDefaults.standard.set(colorName, forKey: AppKey.appColorKey)
     }
 }

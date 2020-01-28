@@ -16,7 +16,6 @@ class MainView: UIView {
         //here we initialized label
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .white
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.text = defaultMessage

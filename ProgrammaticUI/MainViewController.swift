@@ -23,11 +23,22 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //system colors are dark mode ready
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemBackground
         congifureNavBar()
         
         //add target action for reset button ==> similar to IBAction
         mainView.resetButton.addTarget(self, action: #selector(resetAppColor(_:)), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateAppColor()
+    }
+    
+    private func updateAppColor() {
+        if let colorName = UserDefaults.standard.object(forKey: AppKey.appColorKey) as? String {
+            view.backgroundColor = UIColor(named: colorName)
+        }
     }
     
     private func congifureNavBar() {
