@@ -14,6 +14,7 @@
 		C6A7469F23E085F9008392EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A7469D23E085F9008392EF /* LaunchScreen.storyboard */; };
 		C6A746A723E08FD1008392EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A746A623E08FD1008392EF /* SettingsViewController.swift */; };
 		C6A746A923E09AE1008392EF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A746A823E09AE1008392EF /* MainView.swift */; };
+		C6A746AB23E0BD72008392EF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A746AA23E0BD72008392EF /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C6A746A023E085F9008392EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6A746A623E08FD1008392EF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C6A746A823E09AE1008392EF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C6A746AA23E0BD72008392EF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 			children = (
 				C6A7469223E085F7008392EF /* AppDelegate.swift */,
 				C6A7469423E085F7008392EF /* SceneDelegate.swift */,
+				C6A746A823E09AE1008392EF /* MainView.swift */,
+				C6A746AA23E0BD72008392EF /* SettingsView.swift */,
 				C6A746A623E08FD1008392EF /* SettingsViewController.swift */,
 				C6A7469623E085F7008392EF /* MainViewController.swift */,
-				C6A746A823E09AE1008392EF /* MainView.swift */,
 				C6A7469B23E085F9008392EF /* Assets.xcassets */,
 				C6A7469D23E085F9008392EF /* LaunchScreen.storyboard */,
 				C6A746A023E085F9008392EF /* Info.plist */,
@@ -143,6 +146,7 @@
 				C6A7469723E085F7008392EF /* MainViewController.swift in Sources */,
 				C6A7469323E085F7008392EF /* AppDelegate.swift in Sources */,
 				C6A7469523E085F7008392EF /* SceneDelegate.swift in Sources */,
+				C6A746AB23E0BD72008392EF /* SettingsView.swift in Sources */,
 				C6A746A923E09AE1008392EF /* MainView.swift in Sources */,
 				C6A746A723E08FD1008392EF /* SettingsViewController.swift in Sources */,
 			);

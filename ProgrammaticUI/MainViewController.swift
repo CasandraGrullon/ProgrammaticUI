@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
     
     @objc
     private func resetAppColor(_ sender: UIButton) {
-        print("reset")
+        //print("reset")
     }
     
 }
